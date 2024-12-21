@@ -9,3 +9,11 @@ export const headerData = [
   { title: "Featured", path: "/featured" },
   { title: "Gift", path: "/gift" },
 ];
+
+export const productType = [
+  { title: "Tshirt", value: "tshirt" },
+  { title: "Jacket", value: "jacket" },
+  { title: "Pants", value: "pants" },
+  { title: "Hoodie", value: "hoodie" },
+  { title: "Short", value: "short" },
+];

@@ -1,13 +1,15 @@
 import React from "react";
 import Link from "next/link";
-
+import { TriangleAlert } from "lucide-react";
 
 const page = () => {
   return (
     <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="text-center">
-        {/* <ShieldExclamationIcon className="text-yellow-400  mb-4" /> */}
-        <h1 className=" font-semibold text-indigo-600">404</h1>
+        <div className="flex justify-center">
+          <TriangleAlert className="text-yellow-400 w-20 h-20 mb-4" />
+        </div>
+        <h1 className=" font-bold text-gray-500 text-5xl">404</h1>
         <h1 className="mt-4 text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
           Page not found
         </h1>
@@ -17,7 +19,7 @@ const page = () => {
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
             href="#"
-            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Go back home
           </Link>
