@@ -4,12 +4,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
 import localFont from "next/font/local";
+import { Raleway } from "next/font/google";
+
 
 const raleway = localFont({
   src: "../fonts/Raleway.woff2",
-  variable: '--font-raleway',
+  variable: "--font-raleway",
   weight: "100 900",
-})
+});
 
 
 export const metadata: Metadata = {
@@ -24,10 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-          <html lang="en">
-        <body
-          className={`${raleway.variable} antialiased`}
-        >
+      <html lang="en">
+        <body className={`${raleway.variable} font-normal`}>
           <Header />
           {children}
           <Footer />
