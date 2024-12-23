@@ -11,9 +11,9 @@ interface Props {
 }
 const AddToCartButton = ({ product, className }: Props) => {
   const isOutOfStock = product?.stock === 0;
-  const itemCount = 3;
+  const itemCount = 0;
   return (
-    <div>
+    <div className="w-full">
       {itemCount ? (
         <div className="w-full text-sm">
           <div className="flex items-center justify-between">
