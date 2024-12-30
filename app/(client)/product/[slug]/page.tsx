@@ -38,9 +38,13 @@ const SingleProductPage = async ({
             className="text-lg font-bold"
           />
         </div>
-        {product?.stock && (
+        {product?.stock ? (
           <p className="bg-green-100 w-24 text-center text-green-600 text-sm py-2.5 font-semibold rounded-lg  ">
             In Stock
+          </p>
+        ) : (
+          <p className="bg-red-100 w-24 text-center text-red-600 text-sm py-2.5 font-semibold rounded-lg  ">
+            <span className="text-red-600">Out of Stock</span>
           </p>
         )}
         <p className="text-sm text-gray-600 tracking-wide">
@@ -85,10 +89,10 @@ const SingleProductPage = async ({
           </div>
           <div className="border boreder-darkBlue/20 text-center p-3 hover:border-darkBlue rounded-md hoverEffect">
             <p className="text-base font-semibold text-darkColor">
-              Free Shipping
+              Flexible Payment
             </p>
             <p className="text-sm text-gray-500">
-              Free shipping order over $120
+              Pay with multiple Credit Cards
             </p>
           </div>
         </div>
