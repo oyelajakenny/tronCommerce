@@ -2,7 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TronCommerce Backend",
+  title: "TronCommerce",
   description: "Your One-Stop store for all your shopping needs",
 };
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

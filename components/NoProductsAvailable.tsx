@@ -51,7 +51,7 @@ const NoProductsAvailable = ({
         transition={{ delay: 0.4, duration: 0.5 }}
         className="text-gray-600 text-sm"
       >
-        Please check back later orexplore our other products categories
+        Please check back later or explore our other products categories
       </motion.p>
     </div>
   );

@@ -40,6 +40,11 @@ export const productType = defineType({
       type: "string",
     }),
     defineField({
+      name: "brand",
+      title: "Product brand",
+      type: "string",
+    }),
+    defineField({
       name: "price",
       title: "Product Price",
       type: "number",
@@ -76,7 +81,7 @@ export const productType = defineType({
       },
     }),
     defineField({
-      name: "variant",
+      name: "variants",
       title: "Product Type",
       type: "string",
       options: {
