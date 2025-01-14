@@ -11,7 +11,7 @@ interface CartState {
   items: cartItem[];
   addItem: (product: Product) => void;
   removeItem: (productId: string) => void;
-  deleteCartproduct: (productId: string) => void;
+  deleteCartProduct: (productId: string) => void;
   resetCart: () => void;
   getTotalPrice: () => number;
   getSubtotalPrice: () => number;
@@ -53,7 +53,7 @@ const useCartStore = create<CartState>()(
             return acc;
           }, [] as cartItem[]),
         })),
-      deleteCartproduct: (productid) =>
+      deleteCartProduct: (productid) =>
         set((state) => ({
           items: state.items.filter((item) => item.product?._id !== productid),
         })),

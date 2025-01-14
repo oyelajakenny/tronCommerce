@@ -90,6 +90,7 @@ export type Product = {
   }>;
   intro?: string;
   description?: string;
+  brand?: string;
   price?: number;
   discount?: number;
   categories?: Array<{
@@ -101,7 +102,7 @@ export type Product = {
   }>;
   stock?: number;
   status?: "new" | "hot" | "sale";
-  variant?: "tshirt" | "jacket" | "pants" | "hoodie" | "short" | "others";
+  variants?: "tshirt" | "jacket" | "pants" | "hoodie" | "short" | "others";
 };
 
 export type Category = {
@@ -191,3 +192,74 @@ export type Slug = {
 
 export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Product | Category | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug;
 export declare const internalGroqTypeReferenceTo: unique symbol;
+// Source: ./sanity/helpers/query.ts
+// Variable: PRODUCT_BY_SLUG_QUERY
+// Query: *[_type == "product" && slug.current == $slug] | order(name desc)[0]
+export type PRODUCT_BY_SLUG_QUERYResult = {
+  _id: string;
+  _type: "product";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: string;
+  slug?: Slug;
+  images?: Array<{
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+    _key: string;
+  }>;
+  intro?: string;
+  description?: string;
+  brand?: string;
+  price?: number;
+  discount?: number;
+  categories?: Array<{
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    _key: string;
+    [internalGroqTypeReferenceTo]?: "category";
+  }>;
+  stock?: number;
+  status?: "hot" | "new" | "sale";
+  variants?: "hoodie" | "jacket" | "others" | "pants" | "short" | "tshirt";
+} | null;
+// Variable: CATEGORIES_QUERY
+// Query: *[_type == "category"] | order(name asc)
+export type CATEGORIES_QUERYResult = Array<{
+  _id: string;
+  _type: "category";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  description?: string;
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+}>;
+
+// Query TypeMap
+import "@sanity/client";
+declare module "@sanity/client" {
+  interface SanityQueries {
+    "*[_type == \"product\" && slug.current == $slug] | order(name desc)[0]": PRODUCT_BY_SLUG_QUERYResult;
+    "*[_type == \"category\"] | order(name asc)": CATEGORIES_QUERYResult;
+  }
+}

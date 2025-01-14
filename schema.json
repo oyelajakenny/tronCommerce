@@ -465,6 +465,13 @@
         },
         "optional": true
       },
+      "brand": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
       "price": {
         "type": "objectAttribute",
         "value": {
@@ -551,7 +558,7 @@
         },
         "optional": true
       },
-      "variant": {
+      "variants": {
         "type": "objectAttribute",
         "value": {
           "type": "union",
