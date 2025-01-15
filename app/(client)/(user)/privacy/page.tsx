@@ -28,7 +28,7 @@ const PrivacyPage = () => {
         <section>
           <h2 className="text-xl font-semibold  my-2">3. Disclaimer</h2>
           <p>
-            The materials on TronCommerce website are provided on an 'as is'
+            The materials on TronCommerce website are provided on an &apos;as is&apos;
             basis. TronCommerce makes no warranties, expressed or implied, and
             hereby disclaims and negates all other warranties including, without
             limitation, implied warranties or conditions of merchantability,
@@ -68,7 +68,7 @@ const PrivacyPage = () => {
             TronCommerce has not reviewed all of the sites linked to its website
             and is not responsible for the contents of any such linked site. The
             inclusion of any link does not imply endorsement by TronCommerce of
-            the site. Use of any such linked website is at the user's own risk.
+            the site. Use of any such linked website is at the user&apos;s own risk.
           </p>
         </section>
         <section>

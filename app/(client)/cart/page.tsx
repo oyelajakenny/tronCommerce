@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Loading from "@/components/Loading";
 import useCartStore from "@/store";
-import { useAuth, useUser } from "@clerk/nextjs";
+import { useAuth} from "@clerk/nextjs";
 import Container from "@/components/Container";
 import NoAccessToCart from "@/components/NoAccessToCart";
 import EmptyCart from "@/components/EmptyCart";
@@ -34,7 +34,7 @@ const CartPage = () => {
     resetCart,
     getGroupedItems,
   } = useCartStore();
-  const user = useUser();
+ 
   useEffect(() => {
     setIsClient(true);
   }, []);

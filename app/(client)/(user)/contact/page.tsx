@@ -7,7 +7,7 @@ const ContactPage = () => {
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
       <p className="mb-6">
         We&apos;d love to hear from you. Please fill out the form below and
-        we'll get back to you as soon as possible.
+        we&apos;ll get back to you as soon as possible.
       </p>
       <form className="space-y-4">
         <div className="space-y-0.5">

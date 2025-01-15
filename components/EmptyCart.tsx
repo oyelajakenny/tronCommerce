@@ -37,7 +37,7 @@ const EmptyCart = () => {
             Your cart is feeling lonely
           </h2>
           <p className="text-gray-500">
-            It looks like you haven't added anything to your cart yet. Let's
+            It looks like you haven&apos;t added anything to your cart yet. Let&apos;s
             change that and find some amazing products for you!
           </p>
         </div>

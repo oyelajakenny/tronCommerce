@@ -5,7 +5,7 @@ import Container from "./Container";
 import MobileMenu from "./Mobilemenu";
 import SearchBar from "./SearchBar";
 import CartIcon from "./CartIcon";
-import { ListOrdered, ShoppingBag } from "lucide-react";
+import { ListOrdered} from "lucide-react";
 import { currentUser } from "@clerk/nextjs/server";
 import { ClerkLoaded, SignedIn, SignInButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
