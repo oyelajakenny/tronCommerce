@@ -28,7 +28,7 @@ const ProductCharacteristics = ({ product }: { product: Product }) => {
           <p className="flex items-center justify-between">
             Type
             <span className="font-semibold tracking-wide">
-              {product?.variant}
+              {product?.variants}
             </span>
           </p>
           <p className="flex items-center justify-between">
